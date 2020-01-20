@@ -1,0 +1,202 @@
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy
+$ git init
+Initialized empty Git repository in C:/Users/EDUARDO/Desktop/Curso de C# - Udemy/.git/
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git config --global user.name "Eduardo Martins"
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git config --global user.email "edmartins_br@outlook.com"
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        CURSO COMPLETO DE C-sharp.docx
+        "Documenta\303\247\303\243o do C-Sharp.pdf"
+        Material de Apoio/
+        ws-vs2019/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git add .
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   CURSO COMPLETO DE C-sharp.docx
+        new file:   "Documenta\303\247\303\243o do C-Sharp.pdf"
+        new file:   Material de Apoio/02-introducao-csharp-dotnet-para-anotacoes.pdf
+        new file:   Material de Apoio/02-introducao-csharp-dotnet.pdf
+        new file:   Material de Apoio/03-recapitulacao-de-logica-de-programacao-para-anotacoes.pdf
+        new file:   Material de Apoio/03-recapitulacao-de-logica-de-programacao.pdf
+        new file:   Material de Apoio/04-classes-atributos-metodos-static-para-anotacoes.pdf
+        new file:   Material de Apoio/04-classes-atributos-metodos-static.pdf
+        new file:   Material de Apoio/05-construtores-this-sobrecarga-encapsulamento-para-anotacoes.pdf
+        new file:   Material de Apoio/05-construtores-this-sobrecarga-encapsulamento.pdf
+        new file:   Material de Apoio/06-memoria-arrays-listas-para-anotacoes.pdf
+        new file:   Material de Apoio/06-memoria-arrays-listas.pdf
+        new file:   Material de Apoio/07-topicos-especiais-parte1-para-anotacoes.pdf
+        new file:   Material de Apoio/07-topicos-especiais-parte1.pdf
+        new file:   Material de Apoio/09-enumeracoes-composicao-para-anotacoes.pdf
+        new file:   Material de Apoio/09-enumeracoes-composicao.pdf
+        new file:   Material de Apoio/correcao-exercicios-fixacao.pdf
+        new file:   Material de Apoio/exercicio-fixacao05-CORRECAO_CONJUNTOS.pdf
+        new file:   Material de Apoio/exercicio-fixacao05_CONJUNTOS.pdf
+        new file:   Material de Apoio/exercicios1-estrutura-sequencial.pdf
+        new file:   Material de Apoio/exercicios2-estrutura-condicional.pdf
+        new file:   Material de Apoio/exercicios3-estrutura-while.pdf
+        new file:   Material de Apoio/exercicios4-estrutura-for.pdf
+        new file:   Material de Apoio/material-de-apoio-secao-GIT-GITHUB.pdf
+        new file:   Material de Apoio/primeiros-exercicios.pdf
+        new file:   ws-vs2019/Contratos/Contratos/Contratos.sln
+        new file:   ws-vs2019/Contratos/Contratos/Contratos/Contratos.csproj
+        new file:   ws-vs2019/Contratos/Contratos/Contratos/Entities/Department.cs
+        new file:   ws-vs2019/Contratos/Contratos/Contratos/Entities/Enums/WorkerLevel.cs
+        new file:   ws-vs2019/Contratos/Contratos/Contratos/Entities/HourContract.cs
+        new file:   ws-vs2019/Contratos/Contratos/Contratos/Entities/Worker.cs
+        new file:   ws-vs2019/Contratos/Contratos/Contratos/Program.cs
+        new file:   ws-vs2019/Course/Course.sln
+        new file:   ws-vs2019/Course/Course/Banco.cs
+        new file:   ws-vs2019/Course/Course/Class1.cs
+        new file:   ws-vs2019/Course/Course/Course.csproj
+        new file:   ws-vs2019/Course/Course/Funcionario.cs
+        new file:   ws-vs2019/Course/Course/Pensionato.cs
+        new file:   ws-vs2019/Course/Course/Pessoa.cs
+        new file:   ws-vs2019/Course/Course/Products.cs
+        new file:   ws-vs2019/Course/Course/Produtos.cs
+        new file:   ws-vs2019/Course/Course/Program.cs
+        new file:   ws-vs2019/Course/Course/Retangulo.cs
+        new file:   ws-vs2019/Course/Course/Triangulo.cs
+        new file:   ws-vs2019/Course2/Course2/Course2.sln
+        new file:   ws-vs2019/Course2/Course2/Course2/Course2.csproj
+        new file:   ws-vs2019/Course2/Course2/Course2/Program.cs
+        new file:   ws-vs2019/Pedidos/Course/Course.sln
+        new file:   ws-vs2019/Pedidos/Course/Course/Course.csproj
+        new file:   ws-vs2019/Pedidos/Course/Course/Entities/Enums/OrderStatus.cs
+        new file:   ws-vs2019/Pedidos/Course/Course/Entities/Order.cs
+        new file:   ws-vs2019/Pedidos/Course/Course/Program.cs
+        new file:   ws-vs2019/Primeiro/Primeiro.sln
+        new file:   ws-vs2019/Primeiro/Primeiro/Primeiro.csproj
+        new file:   ws-vs2019/Primeiro/Primeiro/Program.cs
+
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git commit -m "Primeiro Upload dos arquivos do curso"
+[master (root-commit) 86b884b] Primeiro Upload dos arquivos do curso
+ 56 files changed, 157563 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 CURSO COMPLETO DE C-sharp.docx
+ create mode 100644 "Documenta\303\247\303\243o do C-Sharp.pdf"
+ create mode 100644 Material de Apoio/02-introducao-csharp-dotnet-para-anotacoes.pdf
+ create mode 100644 Material de Apoio/02-introducao-csharp-dotnet.pdf
+ create mode 100644 Material de Apoio/03-recapitulacao-de-logica-de-programacao-para-anotacoes.pdf
+ create mode 100644 Material de Apoio/03-recapitulacao-de-logica-de-programacao.pdf
+ create mode 100644 Material de Apoio/04-classes-atributos-metodos-static-para-anotacoes.pdf
+ create mode 100644 Material de Apoio/04-classes-atributos-metodos-static.pdf
+ create mode 100644 Material de Apoio/05-construtores-this-sobrecarga-encapsulamento-para-anotacoes.pdf
+ create mode 100644 Material de Apoio/05-construtores-this-sobrecarga-encapsulamento.pdf
+ create mode 100644 Material de Apoio/06-memoria-arrays-listas-para-anotacoes.pdf
+ create mode 100644 Material de Apoio/06-memoria-arrays-listas.pdf
+ create mode 100644 Material de Apoio/07-topicos-especiais-parte1-para-anotacoes.pdf
+ create mode 100644 Material de Apoio/07-topicos-especiais-parte1.pdf
+ create mode 100644 Material de Apoio/09-enumeracoes-composicao-para-anotacoes.pdf
+ create mode 100644 Material de Apoio/09-enumeracoes-composicao.pdf
+ create mode 100644 Material de Apoio/correcao-exercicios-fixacao.pdf
+ create mode 100644 Material de Apoio/exercicio-fixacao05-CORRECAO_CONJUNTOS.pdf
+ create mode 100644 Material de Apoio/exercicio-fixacao05_CONJUNTOS.pdf
+ create mode 100644 Material de Apoio/exercicios1-estrutura-sequencial.pdf
+ create mode 100644 Material de Apoio/exercicios2-estrutura-condicional.pdf
+ create mode 100644 Material de Apoio/exercicios3-estrutura-while.pdf
+ create mode 100644 Material de Apoio/exercicios4-estrutura-for.pdf
+ create mode 100644 Material de Apoio/material-de-apoio-secao-GIT-GITHUB.pdf
+ create mode 100644 Material de Apoio/primeiros-exercicios.pdf
+ create mode 100644 ws-vs2019/Contratos/Contratos/Contratos.sln
+ create mode 100644 ws-vs2019/Contratos/Contratos/Contratos/Contratos.csproj
+ create mode 100644 ws-vs2019/Contratos/Contratos/Contratos/Entities/Department.cs
+ create mode 100644 ws-vs2019/Contratos/Contratos/Contratos/Entities/Enums/WorkerLevel.cs
+ create mode 100644 ws-vs2019/Contratos/Contratos/Contratos/Entities/HourContract.cs
+ create mode 100644 ws-vs2019/Contratos/Contratos/Contratos/Entities/Worker.cs
+ create mode 100644 ws-vs2019/Contratos/Contratos/Contratos/Program.cs
+ create mode 100644 ws-vs2019/Course/Course.sln
+ create mode 100644 ws-vs2019/Course/Course/Banco.cs
+ create mode 100644 ws-vs2019/Course/Course/Class1.cs
+ create mode 100644 ws-vs2019/Course/Course/Course.csproj
+ create mode 100644 ws-vs2019/Course/Course/Funcionario.cs
+ create mode 100644 ws-vs2019/Course/Course/Pensionato.cs
+ create mode 100644 ws-vs2019/Course/Course/Pessoa.cs
+ create mode 100644 ws-vs2019/Course/Course/Products.cs
+ create mode 100644 ws-vs2019/Course/Course/Produtos.cs
+ create mode 100644 ws-vs2019/Course/Course/Program.cs
+ create mode 100644 ws-vs2019/Course/Course/Retangulo.cs
+ create mode 100644 ws-vs2019/Course/Course/Triangulo.cs
+ create mode 100644 ws-vs2019/Course2/Course2/Course2.sln
+ create mode 100644 ws-vs2019/Course2/Course2/Course2/Course2.csproj
+ create mode 100644 ws-vs2019/Course2/Course2/Course2/Program.cs
+ create mode 100644 ws-vs2019/Pedidos/Course/Course.sln
+ create mode 100644 ws-vs2019/Pedidos/Course/Course/Course.csproj
+ create mode 100644 ws-vs2019/Pedidos/Course/Course/Entities/Enums/OrderStatus.cs
+ create mode 100644 ws-vs2019/Pedidos/Course/Course/Entities/Order.cs
+ create mode 100644 ws-vs2019/Pedidos/Course/Course/Program.cs
+ create mode 100644 ws-vs2019/Primeiro/Primeiro.sln
+ create mode 100644 ws-vs2019/Primeiro/Primeiro/Primeiro.csproj
+ create mode 100644 ws-vs2019/Primeiro/Primeiro/Program.cs
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git log -oneline
+fatal: unrecognized argument: -oneline
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git log
+commit 86b884b19eaadbc751b07f7d14a3e4343c7c9cc4 (HEAD -> master)
+Author: Eduardo Martins <edmartins_br@outlook.com>
+Date:   Mon Jan 20 14:06:52 2020 -0300
+
+    Primeiro Upload dos arquivos do curso
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git remote add origin https://github.com/edmartins-br/cursocSharp.git
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git push -u origin master
+Enumerating objects: 74, done.
+Counting objects: 100% (74/74), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (69/69), done.
+Writing objects: 100% (74/74), 16.80 MiB | 1.12 MiB/s, done.
+Total 74 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/edmartins-br/cursocSharp.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$ ^C
+
+EDUARDO@EDUARDO-LAPTOP MINGW64 ~/Desktop/Curso de C# - Udemy (master)
+$
