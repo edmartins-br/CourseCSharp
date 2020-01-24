@@ -21,7 +21,7 @@ namespace Empregado
 
                 Console.Write("Outsourced (y/n): ");
                 char ch = Char.Parse(Console.ReadLine());
-
+                
                 Console.Write("Name: ");
                 string name = Console.ReadLine();
 
