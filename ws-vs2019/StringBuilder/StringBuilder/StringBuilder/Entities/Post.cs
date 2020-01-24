@@ -20,6 +20,7 @@ namespace Comentarios.Entities
 
         }
 
+        // gerado com o gerador de construtores automatico - chave de fenda do lado esquerdo
         public Post(DateTime moment, string title, string content, int likes)
         {
             Moment = moment;
