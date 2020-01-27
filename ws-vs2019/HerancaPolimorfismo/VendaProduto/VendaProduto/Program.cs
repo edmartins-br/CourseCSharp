@@ -13,6 +13,7 @@ namespace VendaProduto
 
             Console.Write("Enter the number of products: ");
             int n = int.Parse(Console.ReadLine());
+            Console.WriteLine();
 
             for (int i = 0; i < n; i++)
             {
