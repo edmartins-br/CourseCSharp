@@ -9,8 +9,10 @@ namespace Xadrez_console
         {
 
             Tabuleiro tab = new Tabuleiro(8, 8);
-            Console.ReadLine();
+            
+            Tela.imprimirTabuleiro(tab);
 
+            Console.ReadLine();
             /*
             Posicao P;
             P = new Posicao(3, 4);
