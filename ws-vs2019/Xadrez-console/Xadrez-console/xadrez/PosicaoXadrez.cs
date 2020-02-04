@@ -1,9 +1,10 @@
 ﻿using System;
+using tabuleiro;
 
 
 namespace xadrez
 {
-    class PosicaoXadrez
+    class PosicaoXadrez // classe para auxiliar o pensamento das jogadas
     {
         public char coluna  { get; set; }
         public int linha { get; set; }
@@ -12,6 +13,11 @@ namespace xadrez
         {
             this.coluna = coluna;
             this.linha = linha;
+        }
+
+        public Posicao toPosicao()
+        {
+            return new Posicao(8 - linha, coluna - 'a');
         }
 
         public override string ToString()
