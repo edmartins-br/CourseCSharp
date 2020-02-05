@@ -8,29 +8,20 @@ namespace SystemIO
     {
         static void Main(string[] args)
         {
-            string path = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\TestFolder";
+            string path = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\TestFolder\file1.txt";
+
+            Console.WriteLine("DirectorySeparetorChar: " + Path.DirectorySeparatorChar);
+            Console.WriteLine("PathSeparator: " + Path.PathSeparator);
+            Console.WriteLine("GetDirectoryName: " + Path.GetDirectoryName(path));
+            Console.WriteLine("GetFilesName: " + Path.GetFileName(path));
+            Console.WriteLine("GetExtension: " + Path.GetExtension(path));
+            Console.WriteLine("GetFullPath: " + Path.GetFullPath(path));
+            Console.WriteLine("GetFileNameWithoutExtensions: " + Path.GetFileNameWithoutExtension(path));
+            Console.WriteLine("GetTempPath: " + Path.GetTempPath());
+
             try
             {
-                // IEnumerable<string> pode ser substituido por var e o c# faz a inferencia de tipo automaticamente
-                IEnumerable<string> folders =  Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
-                Console.WriteLine("FOLDERS: ");
-
-                foreach(string s in folders)
-                {
-                    Console.WriteLine(s);
-                }
-
-                // neste caso foi substituido enumerable por VAR
-                var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
-                Console.WriteLine();
-                Console.WriteLine("FILES: ");
-
-                foreach (string s in files)
-                {
-                    Console.WriteLine(s);
-                }
-
-                Directory.CreateDirectory(path + "\\NewFolder");
+                
             }
             catch (IOException e)
             {
