@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
 
 namespace SystemIO
 {
@@ -7,8 +8,87 @@ namespace SystemIO
     {
         static void Main(string[] args)
         {
-            string sourcePath = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\file1.txt";
-            string targetPath = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\file2.txt";
+            string path = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\TestFolder";
+            try
+            {
+                // IEnumerable<string> pode ser substituido por var e o c# faz a inferencia de tipo automaticamente
+                IEnumerable<string> folders =  Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                Console.WriteLine("FOLDERS: ");
+
+                foreach(string s in folders)
+                {
+                    Console.WriteLine(s);
+                }
+
+                // neste caso foi substituido enumerable por VAR
+                var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
+                Console.WriteLine();
+                Console.WriteLine("FILES: ");
+
+                foreach (string s in files)
+                {
+                    Console.WriteLine(s);
+                }
+
+                Directory.CreateDirectory(path + "\\NewFolder");
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("ERRO! ");
+                Console.WriteLine(e.Message);
+            }
+
+
+        }
+    }
+}
+
+
+
+
+
+
+
+/* ==================== LIST FILES / LIST FOLDERS / CREATE FOLDER ===============
+ * 
+ string path = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\TestFolder";
+            try
+            {
+                // IEnumerable<string> pode ser substituido por var e o c# faz a inferencia de tipo automaticamente
+                IEnumerable<string> folders =  Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                Console.WriteLine("FOLDERS: ");
+
+                foreach(string s in folders)
+                {
+                    Console.WriteLine(s);
+                }
+
+                // neste caso foi substituido enumerable por VAR
+                var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
+                Console.WriteLine();
+                Console.WriteLine("FILES: ");
+
+                foreach (string s in files)
+                {
+                    Console.WriteLine(s);
+                }
+
+                Directory.CreateDirectory(path + "\\NewFolder");
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("ERRO! ");
+                Console.WriteLine(e.Message);
+            }
+     
+     */
+
+
+
+
+/* ===================== STREAM WRITER / TO UPER =======================
+string sourcePath = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\file1.txt";
+string targetPath = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\file2.txt";
 
 
             try
@@ -31,10 +111,6 @@ namespace SystemIO
                 Console.WriteLine(e.Message);
             }
 
-
-        }
-    }
-}
 
 
 
