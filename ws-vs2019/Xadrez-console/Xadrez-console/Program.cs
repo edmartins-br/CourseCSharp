@@ -60,13 +60,17 @@ namespace Xadrez_console
                     }
                 }
 
-                Tela.imprimirTabuleiro(partida.tab);
-                Console.ReadLine();
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
             catch (TabuleiroException e)
             {
                 Console.WriteLine("ATENÇÃO: " + e.Message);
                 Console.ReadLine();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("OCORREU UM ERRO INESPERADO: " + e.Message);
             }
 
             Posicao P;

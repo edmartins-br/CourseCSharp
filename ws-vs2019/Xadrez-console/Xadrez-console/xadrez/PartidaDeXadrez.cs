@@ -40,7 +40,7 @@ namespace xadrez
             Peca pecaCapturada = tab.retirarPeca(destino);
             tab.colocarPeca(p, destino);
 
-            if(pecaCapturada != null)
+            if (pecaCapturada != null)
             {
                 capturadas.Add(pecaCapturada);
             }
@@ -53,10 +53,10 @@ namespace xadrez
             Peca p = tab.retirarPeca(destino);
             p.decrementarQtdMovimentos();
 
-            if(pecaCapturada != null)
+            if (pecaCapturada != null)
             {
                 tab.colocarPeca(pecaCapturada, destino);
-                capturadas.Remove(pecaCapturada);                
+                capturadas.Remove(pecaCapturada);
             }
             tab.colocarPeca(p, origem);
         }
@@ -83,9 +83,18 @@ namespace xadrez
             {
                 xeque = false;
             }
+            if (testeXequeMate(adversaria(jogadorAtual)))
+            {
+                terminada = true;
+            }
+            else
+            {
+                turno++;
+                mudaJogador();
+            }
 
-            turno++;
-            mudaJogador();
+            //turno++;
+            //mudaJogador();
         }
 
         // VALIDA A POSIÇÃO DE ORIGEM  PARA VERIFICAR SE É UM MOVIMENTO POSSÍVEL DE SE FAZER
@@ -161,7 +170,7 @@ namespace xadrez
         // IDENTIFICA SE A PEÇA NO DESTINO É UM ADVERSÁRIO OU NÃO (LÓGIVA PARA XEQUE E XEQUE MATE)
         private Cor adversaria(Cor cor)
         {
-            if(cor == Cor.Branca)
+            if (cor == Cor.Branca)
             {
                 return Cor.Preta;
             }
@@ -188,20 +197,54 @@ namespace xadrez
         public bool estaEmXeque(Cor cor)
         {
             Peca R = rei(cor);
-            if(R == null)
+            if (R == null)
             {
                 throw new TabuleiroException("Não tem rei da cor " + cor + " no tabuleiro!");
             }
 
-            foreach(Peca x in pecasEmJogo(adversaria(cor)))
+            foreach (Peca x in pecasEmJogo(adversaria(cor)))
             {
                 bool[,] mat = x.movimentosPossiveis();
-                if(mat[R.posicao.linha, R.posicao.coluna])
+                if (mat[R.posicao.linha, R.posicao.coluna])
                 {
                     return true;
                 }
             }
             return false;
+        }
+
+        // MÉTDO PARA TESTAR SE ESTÁ EM XEQUE MATE
+        public bool testeXequeMate(Cor cor)
+        {
+            if (!estaEmXeque(cor))
+            {
+                return false;
+            }
+            foreach (Peca x in pecasEmJogo(cor))
+            {
+                bool[,] mat = x.movimentosPossiveis();
+                for (int i = 0; i < tab.linhas; i++)
+                {
+                    for (int j = 0; j < tab.colunas; j++)
+                    {
+                        if (mat[i, j])
+                        {
+                            Posicao origem = x.posicao;
+                            Posicao destino = new Posicao(i, j);
+                            Peca pecaCapturada = executaMovimento(origem, destino);
+                            bool testeXeque = estaEmXeque(cor);
+                            desfazMovimento(origem, destino, pecaCapturada);
+
+                            if (!testeXeque)
+                            {
+                                return false;
+                            }
+
+                        }
+                    }
+                }
+            }
+            return true;
         }
 
         // COLOCA NOV APEÇA NO TABULEIRO
@@ -254,6 +297,6 @@ namespace xadrez
 
 
 
-   
+
 }
 
