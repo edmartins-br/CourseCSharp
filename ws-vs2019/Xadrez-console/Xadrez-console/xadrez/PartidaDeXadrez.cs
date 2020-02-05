@@ -14,6 +14,7 @@ namespace xadrez
         private HashSet<Peca> capturadas;
         public bool xeque { get; private set; }
         public Peca vulneravelEnPassant { get; private set; }
+        
 
         public PartidaDeXadrez()
         {
@@ -59,7 +60,7 @@ namespace xadrez
                 tab.colocarPeca(T, destinoT);
             }
 
-            // #jogadaespecial en passant
+            // #jogadaespecial EN PASSANT
             if (p is Peao)
             {
                 if (origem.coluna != destino.coluna && pecaCapturada == null)
@@ -81,6 +82,7 @@ namespace xadrez
             return pecaCapturada;
         }
 
+        // DESFAZ O MOVIMENTO
         public void desfazMovimento(Posicao origem, Posicao destino, Peca pecaCapturada)
         {
             Peca p = tab.retirarPeca(destino);

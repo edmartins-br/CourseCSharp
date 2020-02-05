@@ -65,7 +65,7 @@ namespace Xadrez_console
         {
 
             ConsoleColor fundoOriginal = Console.BackgroundColor;
-            ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
+            //ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
 
             //char casa = '\u0FC0';
             for (int i = 0; i < tab.linhas; i++)
