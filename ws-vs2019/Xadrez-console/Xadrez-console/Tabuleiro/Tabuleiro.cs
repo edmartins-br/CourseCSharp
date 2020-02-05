@@ -53,6 +53,19 @@ namespace tabuleiro
             p.posicao = pos;
         }
 
+        // metodo para retirar uma peca
+        public Peca retirarPeca(Posicao pos)
+        {
+            if (peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.posicao = null;
+            pecas[pos.linha, pos.coluna] = null;
+            return aux;
+        }
+
         // verifica se a posição é valida
         public bool posicaoValida(Posicao pos)
         {
