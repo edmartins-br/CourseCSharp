@@ -39,9 +39,9 @@ namespace SystemIO
 
 
 
-
-/* ==================== LIST FILES / LIST FOLDERS / CREATE FOLDER ===============
- * 
+/*
+// ==================== LIST FILES / LIST FOLDERS / CREATE FOLDER ===============
+  
  string path = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\TestFolder";
             try
             {
@@ -72,12 +72,12 @@ namespace SystemIO
                 Console.WriteLine(e.Message);
             }
      
-     */
+     
 
 
 
 
-/* ===================== STREAM WRITER / TO UPER =======================
+// ===================== STREAM WRITER / TO UPER =======================
 string sourcePath = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\file1.txt";
 string targetPath = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\file2.txt";
 
@@ -106,7 +106,7 @@ string targetPath = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arq
 
 
 // ================== STREAM READER ================
-/*
+
 string path = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\file1.txt";
 
 try
@@ -135,7 +135,7 @@ catch (IOException e)
 
 
 
-/*
+
 // ================= FILE STREAM / STREAM READER =================
 try
     { 
@@ -176,7 +176,7 @@ if(sr != null) sr.Close();
 
 
 // ================ FILE INFO / FILE =================
-/*
+
 string sourcePath = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\file1.txt";
 string targetPath = @"C:\Users\EDUARDO\Desktop\Curso de C# - Udemy\ws-vs2019\Arquivos\SystemIO\file2.txt";
 
