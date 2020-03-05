@@ -10,7 +10,7 @@ namespace Locadora.Services
 
         private ITaxService _taxService;
 
-        public RentalService(double pricePerHour, double pricePerDay, ITaxService taxService) //
+        public RentalService(double pricePerHour, double pricePerDay, ITaxService taxService/**/) 
         {
             PricePerHour = pricePerHour;
             PricePerDay = pricePerDay;

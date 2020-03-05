@@ -16,7 +16,7 @@ namespace Locadora
             Console.Write("Pickup date (dd/mm/yyyy hh:ss): ");
             DateTime start = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
 
-            Console.Write("Return date (dd/mm/yyyy hh:ss): ");
+             Console.Write("Return date (dd/mm/yyyy hh:ss): ");
             DateTime finish = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
 
             Console.Write("Enter price per hour: ");
